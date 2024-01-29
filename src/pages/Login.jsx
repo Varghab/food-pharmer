@@ -9,33 +9,33 @@ import Loading from '../components/UI/Loading';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const {CheckAuth, isAuthenticated} = useAuth();
+  // const {CheckAuth, isAuthenticated} = useAuth();
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const handleLogin = async(e) => {
-    setLoading(true);
-    e.preventDefault();
-    try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password
-      })
-      if(error){
-        sendToast('error',error.message);
-        setLoading(false);
+  // const handleLogin = async(e) => {
+  //   setLoading(true);
+  //   e.preventDefault();
+  //   try {
+  //     const { data, error } = await supabase.auth.signInWithPassword({
+  //       email,
+  //       password
+  //     })
+  //     if(error){
+  //       sendToast('error',error.message);
+  //       setLoading(false);
 
-      }else{
-        CheckAuth();
-        sendToast('success',"Welcome to FoodPharmer");
-          setLoading(false);
-          navigate('/features'); // Redirect to a different page after successful signup
+  //     }else{
+  //       CheckAuth();
+  //       sendToast('success',"Welcome to FoodPharmer");
+  //         setLoading(false);
+  //         navigate('/features'); // Redirect to a different page after successful signup
 
-      }
-    } catch (error) {
-      sendToast('error',error.message);
-      setLoading(false);
-    }
-  };
+  //     }
+  //   } catch (error) {
+  //     sendToast('error',error.message);
+  //     setLoading(false);
+  //   }
+  // };
 
   // useEffect(()=>{
   //   CheckAuth().then(({status})=>{
