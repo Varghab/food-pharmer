@@ -37,11 +37,11 @@ const Login = () => {
     }
   };
 
-  useEffect(()=>{
-    CheckAuth().then(({status})=>{
-      status&&navigate('/features')
-    })
-  },[])
+  // useEffect(()=>{
+  //   CheckAuth().then(({status})=>{
+  //     status&&navigate('/features')
+  //   })
+  // },[])
 
   return (
    <Loading loading={loading}>
