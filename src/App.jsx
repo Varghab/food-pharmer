@@ -20,11 +20,6 @@ import { useAuth } from './store/authContext';
 import ProtectRoute from './components/ProtectRoute';
 
 function App() {
-  console.log(import.meta.env.VITE_RAPIDAPI_KEY) // 123
-  const {CheckAuth} = useAuth();
-  useEffect(()=>{
-    CheckAuth();
-  },[])
   const router = createBrowserRouter([
     {
       path:"/",
