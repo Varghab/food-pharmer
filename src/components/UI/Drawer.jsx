@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Drawer = ({toggle, setToggle, isAuthenticated, Logout}) => {
   return (
-    <div className={`h-screen z-[100] fixed top-0 right-0 w-60 bg-neutral-200 transition-all duration-300 ease-in-out hidden ${toggle?"translate-x-0":"translate-x-full"} `}>
+    <div className={`h-screen z-[100] fixed top-0 right-0 w-60 bg-neutral-200 transition-all duration-300 ease-in-out ${toggle?"translate-x-0":"translate-x-full"} `}>
       <div className='py-6 px-4'>
         <div className='flex justify-end'>
           <AiOutlineClose onClick={()=>setToggle(p=>!p)} className='text-xl' />
